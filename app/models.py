@@ -83,15 +83,15 @@ class AddressBook(UserDict[Name, Record]):
     def __str__(self) -> str:
         return "\n".join(str(contact) for contact in self.data.values())
 
-    def add_contact(self, contact: Record) -> None:
-        name = contact.name
-        phones = contact.phones
+    def add_contact(self, record: Record) -> None:
+        name = record.name
+        phones = record.phones
 
         if self.data.get(name):
             for phone in phones:
                 self.data[name].add_phone(phone.value)
         else:
-            self.data[name] = contact
+            self.data[name] = record
 
     def find(self, name: str) -> Optional[Record]:
         return self.data.get(Name(name), None)
