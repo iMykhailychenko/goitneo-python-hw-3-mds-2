@@ -7,11 +7,11 @@ from app.services import (
     add_contact,
     birthdays,
     change_contact,
+    delete_contact,
     get_all_contacts,
     get_contact,
     parse_input,
     show_birthday,
-    delete_contact,
 )
 from app.validations import input_error
 
