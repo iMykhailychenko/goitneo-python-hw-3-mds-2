@@ -161,4 +161,4 @@ cython_debug/
 
 
 .vscode/
-assets/datebase.csv
+assets/
